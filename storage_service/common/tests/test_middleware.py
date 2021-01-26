@@ -17,7 +17,7 @@ class AuditLogMiddlewareTestCase(TestCase):
         with self.modify_settings(
             MIDDLEWARE={"append": "common.middleware.AuditLogMiddleware"}
         ):
-            response = self.client.get("/transfer/")
+            response = self.client.get("/")
             self.assertTrue(response.has_header("X-Username"))
             self.assertEqual(response["X-Username"], self.user.username)
 
