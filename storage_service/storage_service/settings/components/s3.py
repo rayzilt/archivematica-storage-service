@@ -14,6 +14,10 @@ From the docs at time of writing: https://boto3.amazonaws.com/v1/documentation/a
     sensitive data this should not be used in production.
 
 """
+
+'''
+from __future__ import absolute_import
+
 from os import environ
 
 from storage_service.settings.helpers import is_true
@@ -31,3 +35,4 @@ try:
     S3_TIMEOUTS = int(environ.get("SS_S3_TIMEOUTS", S3_TIMEOUTS))
 except ValueError:
     pass
+'''
