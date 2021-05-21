@@ -530,7 +530,7 @@ if is_true(environ.get("SS_S3_DEBUG", "false")):
 
 # Read and connect timeouts for S3. Ideally these will match the
 # defaults recommended by your S3 implementation
-S3_TIMEOUTS = 900
+S3_TIMEOUTS = 3600
 try:
     S3_TIMEOUTS = int(environ.get("SS_S3_TIMEOUTS", S3_TIMEOUTS))
 except ValueError:
